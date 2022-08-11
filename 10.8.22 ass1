@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+	int n,x,y,r,sum=0,count=1;
+	printf("enter a number\n");
+	scanf("%d",&n);             
+	printf("enter x,y vlaues");
+	scanf("%d\t%d",&x,&y);     
+	while(n>0)          
+	{
+		r=n%10;       
+		if(r==x)        
+		{
+		  x=y;           
+		  sum=sum+(x*count);    
+	    }          
+		else     
+		{
+		  sum=sum+(r*count);         
+	    }
+	count=count*10;
+	n=n/10;   
+	}
+	printf("%d",sum);
+}
